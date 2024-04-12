@@ -1,8 +1,30 @@
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
 }
 
-a {
-  color: #00B7FF;
+h1{
+  color: #fff
+}
+ h2, h3 {
+  color: #6a0dad;
+}
+section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
 }

@@ -1,30 +1,76 @@
-
 body {
   font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header {
-  background-color: #6a0dad;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
 }
 
-h1{
-  color: #fff
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
- h2, h3 {
-  color: #6a0dad;
+
+
+h1, h2, h3 {
+  margin: 0;
 }
+
+p {
+  margin: 0 0 10px 0;
+}
+
 section {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
+  margin: 20px;
 }
+
+.redes {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.redes img {
+  width: 20px; /* Ajusta este valor para cambiar el tamaño de las imágenes */
+  height: 20px; /* Ajusta este valor para cambiar el tamaño de las imágenes */
+  margin-right: 5px;
+  margin-left: 10px;
+  
+}
+
+.redes ul {
+  display: flex; /* Esto hará que los elementos de la lista se muestren en línea */
+  justify-content: space-between; /* Esto distribuirá el espacio de manera uniforme entre los elementos de la lista */
+}
+
+.redes a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s ease;
+  font-size: 20px; /* Ajusta este valor para cambiar el tamaño del texto de los enlaces */
+  margin: 5px;
+}
+
+.redes a:hover {
+  color: #007BFF;
+}
+
+footer{
+  background-color: #333;
+ 
+}
+
+
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1, h2, h3 {
+    font-size: 24px;
+  }
+}
+

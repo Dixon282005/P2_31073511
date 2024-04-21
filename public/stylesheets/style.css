@@ -1,20 +1,28 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
+    color: #333;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 header {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 20px;
   background-color: #333;
   color: white;
-  padding: 10px;
-  text-align: center;
 }
 
 
 h1, h2, h3 {
   margin: 0;
+  
+}
+
+h1, h2{
+  color: #007BFF;
 }
 
 p {
@@ -22,7 +30,34 @@ p {
 }
 
 section {
-  margin: 20px;
+  display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.bio, .exp, .edu, .skills, .idi {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.idi li{
+  list-style: none;
+}
+.skills li{
+  list-style: none;
+}
+
+.edu li{
+  list-style: none;
+}
+
+.exp li{
+  list-style: none;
 }
 
 .redes {
@@ -33,23 +68,23 @@ section {
 }
 
 .redes img {
-  width: 20px; /* Ajusta este valor para cambiar el tamaño de las imágenes */
-  height: 20px; /* Ajusta este valor para cambiar el tamaño de las imágenes */
+  width: 20px; 
+  height: 20px; 
   margin-right: 5px;
   margin-left: 10px;
   
 }
 
 .redes ul {
-  display: flex; /* Esto hará que los elementos de la lista se muestren en línea */
-  justify-content: space-between; /* Esto distribuirá el espacio de manera uniforme entre los elementos de la lista */
+  display: flex;
+  justify-content: space-between; 
 }
 
 .redes a {
   color: #fff;
   text-decoration: none;
   transition: color 0.5s ease;
-  font-size: 20px; /* Ajusta este valor para cambiar el tamaño del texto de los enlaces */
+  font-size: 20px; 
   margin: 5px;
 }
 
@@ -62,15 +97,4 @@ footer{
  
 }
 
-
-
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 18px;
-  }
-
-  h1, h2, h3 {
-    font-size: 24px;
-  }
-}
 

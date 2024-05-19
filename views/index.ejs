@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Mi CV | Dixon Ramos</title>
+  <title><%= title %></title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -88,6 +88,25 @@
       <li>Inglés: Intermedio</li>
     </ul>
   </div>
+  <section class="sec">
+    
+    </div>
+    <div class="text">
+      <h1 class="info">¿Quieres saber más?</h1>
+      <p class="p_info">Si quieres saber más sobre mi, puedes contactarme a través de mis redes sociales o a través de este formulario.</p>
+    </div>
+    <div class="form">
+      <h1>Formulario de contacto</h1>
+    <form id="contacto-form" action="/form-contacto" method="POST" >
+      <label for="name">Nombre:</label>
+      <input type="text" name="name" placeholder="Jhon Doe" required id="name">
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" name="email"  placeholder = "ejemplo@gmail.com" required id="email">
+      <label for="comment">Comentario:</label>
+      <textarea name="mensaje"  placeholder="Escribe un mensaje..." id="mensaje" required></textarea>
+      <button type="submit" id="submit-btn">Enviar</button>
+    </form>
+  </section>
   </section>
     <footer>
       <div class="redes">

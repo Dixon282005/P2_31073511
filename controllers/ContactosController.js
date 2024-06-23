@@ -4,7 +4,8 @@ const nodemailer = require('nodemailer');
 const USER_EMAIL = process.env.USER_EMAIL;
 const USER_PASS = process.env.USER_PASS;
 const USER_DESTINO1 = process.env.USER_DESTINO1;
-
+const USER_DESTINO2 = process.env.USER_DESTINO2;
+const secretGoogle = process.env.USER_RECAP;
 
 class ContactosController {
   constructor(){
@@ -23,7 +24,7 @@ class ContactosController {
   enviarCorreo(name, email, mensaje, USER_EMAIL, USER_DESTINO1){
     const mailOptions = {
       from : USER_EMAIL,
-      to : [email, USER_DESTINO1],
+      to : [email, USER_DESTINO1,USER_DESTINO2],
       subject : 'Registro de formulario',
       text : 'Usuario: '+name+'\nEmail: '+email+'\nComentario: '+mensaje
     };
@@ -51,7 +52,7 @@ class ContactosController {
 
   async obtenerPais(ip) {
     try {
-      const response = await fetch('https://ipinfo.io/'+ip+'?token=40048199a0981a');
+      const response = await fetch('https://ipinfo.io/'+ip+'?token=1b5fab0bed2144');
       const data = await response.json();
       return data.country; // Retorna el país
     } catch (error) {
@@ -62,7 +63,23 @@ class ContactosController {
 
 
   async add(req, res){
-    // Validar los datos del formulario
+    const responseGoogle = req.body["g-recaptcha-response"];
+    
+    const urlGoogle = `https:www.google.com/recaptcha/api/siteverify?secret=${secretGoogle}&response=${responseGoogle}`;
+    const RecaptchaGoogle = await fetch(urlGoogle, { method: "post", });
+    const google_response_result = await RecaptchaGoogle.json();
+    console.log(google_response_result)
+    if (google_response_result.success == true) {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     const { name, email, mensaje } = req.body;
 
 if (!name || !email || !mensaje) {
@@ -82,18 +99,10 @@ if (!name || !email || !mensaje) {
     await this.enviarCorreo(name, email, mensaje, USER_EMAIL, USER_DESTINO1);
 
     res.send("Tus datos se han enviado con exito");
+}else{
+  res.send("Responda el reCAPTCHA");
+}
 }
 }
 
 module.exports = ContactosController;
-    /*try{
-     await this.contactosModel.crearContacto(email, name, mensaje, ip, fecha);
-     res.status(200).send("Tus datos se han enviado con exito");
-    }catch(error){
-     res.status(500).send("Error enviando los datos");
-        
-    }
-  }
-}
-
-module.exports = ContactosController; */

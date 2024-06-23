@@ -24,7 +24,7 @@ router.get('/google/callback',
     failureFlash: true 
   }),
   (req, res) => {
-    res.redirect('http://localhost:3000/contactos');
+    res.redirect('https://p2-31073511.onrender.com/auth/google/callback');
   }
 );
 

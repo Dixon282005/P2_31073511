@@ -1,0 +1,50 @@
+
+body{
+ 
+  background-color: #f1f0f0;
+}
+
+/* Estilos para la tabla */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Estilos para las celdas */
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilos para los encabezados de columna */
+th {
+  background-color: #f2f2f2;
+}
+
+.btn {
+	width: 100%;
+	padding: .75em;
+	margin-bottom: .5em;
+	border: none;
+	border-radius: 25px;
+	color: #ffffff;
+	background-color: #007bff;
+	cursor: pointer;
+	transition: background-color .3s;
+  text-decoration: none;
+  }
+  
+  .btn:hover {
+	background-color: #0056b3;
+  }
+  
+  .btn-primary {
+	background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+	background-color: #0056b3;
+  }
+  

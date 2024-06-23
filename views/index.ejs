@@ -18,16 +18,27 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="manifest" href="/images/site.webmanifest">
+  <meta property="og:title" content="Dixon RamosCV" />
+  <meta property="og:description" content="Portafolio de Dixon Ramos" />
+  <meta property="og:site_name" content="Dixon Ramos Portafolio" />
 </head>
 
 <body>
+
   <header>
-    <div class="head">
+    <nav class="navbar">
+      <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/auth/login">Iniciar Sesión</a></li>
+          <li><a href="/contactos">Contactos</a></li>
+      </ul>
+  </nav>
+  </header>
+  <div class="head">
     <h1>Dixon Ramos</h1>
     <p>📧Email: Dixonramos282005@hotmail.com</p>
     <p>☎️Teléfono: +58 04243741634</p>
   </div>
-  </header>
 
   <section>
     <div class="bio">
@@ -86,6 +97,7 @@
       </li>
       <li>
         <%= skill6 %>
+
       </li>
     </ul>
   </div>
@@ -114,7 +126,7 @@
       <input type="email" name="email"  placeholder = "ejemplo@gmail.com" required id="email">
       <label for="comment">Comentario:</label>
       <textarea name="mensaje"  placeholder="Escribe un mensaje..." id="mensaje" required></textarea>
-      <div class="g-recaptcha" data-sitekey="6LckQugpAAAAAEUeyGKWdPFZ59Sj2RyRSzjxnckt"></div>
+      <div class="g-recaptcha" data-sitekey="6LefNvApAAAAAAOJH0AIC-PYNQNP_TR1wwe4u8hs"></div>
       <button type="submit" id="submit-btn">Enviar</button>
     </form>
   </section>
